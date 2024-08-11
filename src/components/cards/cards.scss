@@ -1,0 +1,93 @@
+@import "../../styles/variables";
+
+.cardsSection {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	.card {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 16px;
+			background-color: $component-bg;
+			border-radius: 20px;
+			width: 33%;
+			overflow: hidden;
+			position: relative;
+			transition: background-color 0.5s ease-in-out;
+			&:hover {
+					background-color: #202020;
+					.cardText h3, .cardText p {
+							color: #FFFFFF;
+					}
+					.cardImageMain {
+							margin-top: -86px;
+					}
+				  .cardText .cardButton {
+						opacity: 1;
+				}
+			}
+			.cardImageMain {
+					border-radius: 20px;
+					transition: 0.5s ease-in-out;
+					width: 100%;
+					height: auto;
+			}
+        .cardText {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 24px 24px 24px;
+            h3 {
+                font-family: 'Druk', sans-serif;
+                font-size: 32px;
+                line-height: 41.6px;
+                color: $text-main;
+                transition: color 0.5s ease-in-out;
+            }
+            p {
+                line-height: 25.6px;
+                color: $text-main;
+                transition: color 0.5s ease-in-out;
+            }
+						.cardButton {
+							position: absolute;
+							bottom: 24px;
+							left: 50%;
+							transform: translateX(-50%);
+							width: calc(100% - 48px);
+							background-color: #F36722;
+							color: #FFFFFF;
+							border: none;
+							padding: 24px 22px 22px 24px;
+							border-radius: 20px;
+							font-family: 'Druk', sans-serif;
+							font-size: 16px;
+							line-height: 22.4px;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							cursor: pointer;
+							transition: opacity 0.5s ease-in-out;
+							opacity: 0;
+							img {
+									width: 24px;
+									height: 24px;
+							}
+					}
+        }
+    }
+		@media screen and (max-width: 430px){
+			.card{
+				width: 100%;
+			}
+			.card .cardText h3 {
+				font-size: 26px;
+			}
+		}
+}
+@media screen and (max-width: 430px){
+	.cardsSection{
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,87 @@
+@import "../../styles/variables";
+
+.introSection {
+    display: flex;
+    margin-top: 8px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    height: 830px;
+    position: relative;
+    overflow: hidden;
+    .backgroundImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+    }
+    .introContent {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 100%;
+        justify-content: end;
+        position: relative;
+        z-index: 2;
+        h1 {
+            font-family: 'Druk', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 96px;
+            color: #FFFFFF;
+            width: 80%;
+            transition: color 0.5s ease-in-out;
+        }
+        .introButtons {
+            display: flex;
+            justify-content: space-between;
+            button {
+                border: none;
+                background-color: $component-bg;
+                font-family: 'Druk', sans-serif;
+                font-size: 16px;
+                line-height: 22.4px;
+                color: $text-main;
+                border-radius: 20px;
+                padding: 20px 24px 22px 24px;
+                width: 33%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+                &:hover {
+                    background-color: $primary-orange;
+                    color: #FFFFFF;
+                }
+                img {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 430px){
+		.introContent h1{
+            font-size: 26px;
+            line-height: normal;
+        }
+        .introContent .introButtons {
+            flex-direction: column;
+            gap: 8px;
+        }
+        .introContent .introButtons button{
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .introContent .introButtons button:first-child, :active {
+            background-color: $primary-orange;
+            color: #FFFFFF;
+        }
+	}
+}

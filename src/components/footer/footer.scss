@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.footerSides {
+  display: flex;
+  justify-content: space-between;
+  .footerTop, .footerLinkSection {
+    display: flex;
+    gap: 32px;
+    h5 {
+      font-family: 'Druk', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 120%;
+    }
+  }
+  .footerTop {
+    flex-direction: column;
+  }
+  .footerLeft {
+    position: relative;
+    z-index: 1;
+  }
+}
+.madeby {
+  font-variant: uppercase;
+  font-family: 'Druk', sans-serif;
+  font-size: 12px;
+  display: flex;
+  margin-top: 300px;
+}
+.ball {
+  width: 500px;
+  position: absolute;
+  bottom: 0; /* Прижать к низу wrapper */
+  right: 0;  /* Прижать к правой стороне wrapper */
+  z-index: 0;
+}
+.qr{
+	width: 350px;
+	height: 400px;
+	left: 70%;
+  top: 85%;
+	position: absolute;
+}
+@media screen and (max-width: 430px) {
+	.qr{
+		display: none;
+	}
+	.footerLinkSection {
+		flex-direction: column;
+	}
+	.ball{
+		width: 200px;
+	}
+	.footerSides .footerTop h5{
+		font-size: 26px;
+	}
+	.madeby {
+		margin-top: 160px;
+	}
+}

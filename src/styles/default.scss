@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+  font-family: "Druk";
+  src: local("DrukWideCyr-Bold"),
+    url("../fonts/DrukWideCyr-Bold.woff") format("woff");
+}
+
+* , p {
+	scrollbar-width: none; /* For Firefox */
+	-ms-overflow-style: none; /* For Internet Explorer & Edge */
+	scroll-behavior: smooth;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+	
+	margin: 0;
+	padding: 0;
+}
+img {
+	pointer-events: none;
+	user-select: none;
+}
+h1 , h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+html{
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*,*::before, *::after{
+	box-sizing: border-box;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+body {
+	font-family: 'Inter' , sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	height: 100%;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  min-height: 100vh;
+  background-color: #ECECEC;
+  padding: 20px;
+}
+@media screen and (max-width: 430px){
+	.wrapper, footer{
+		padding: 12px 12px 24px 12px;
+	}
+	footer{
+		margin-top: 42px;
+	}
+}
+nav {
+	flex: 0 0 auto; /* Make the navbar take up only the space it needs */
+	z-index: 1000;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	text-decoration: none;
+	box-sizing: border-box;
+	padding: 14px 20px;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+}
+main{
+	flex: 1 1 auto; /* Make the content take up the remaining space */
+}
+footer {
+	flex: 0 0 auto; /* Make the footer take up only the space it needs */
+	z-index: 1;
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	border-top: 1px solid #202020;
+	padding: 32px 20px 32px 20px;
+}

@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+
+.homeSection{
+	display: flex;
+	flex-direction: column;
+	.letsPlay{
+		display: flex;
+		justify-content: space-between;
+		margin: 120px 0 64px 0;
+		align-items: end;
+		h2{
+			font-family: 'Druk', sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 96px;
+		}
+		p{
+			text-transform: uppercase;
+			font-family: 'Druk', sans-serif;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 26px;
+			color: $primary-orange;
+  		display: flex;
+			gap: 12px;
+		}
+		@media screen and (max-width: 430px){
+			h2{
+				font-size: 26px;
+			}
+			p img{
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 430px){
+		.letsPlay{
+			align-items: baseline;
+			margin: 42px 0 24px 0;
+		}
+	}
+}

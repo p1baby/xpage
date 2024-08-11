@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+.navigation{
+	display: flex;
+	gap: 64px;
+	align-items: center;
+	padding: 0;
+	.menuMobile{
+		display: none;
+	}
+	.navbarBtn{
+		margin: 12px 0 0 0;
+	}
+	.menu{
+		display: flex;
+		flex-direction: row;
+		gap: 24px;
+		a{
+			font-family: 'Druk', sans-serif;
+			font-size: 14px;
+			line-height: 19.6px;
+			color: $text-main;
+			text-decoration: none;
+		}
+	}
+}
+.navMenu{
+	display: flex;
+	gap: 24px;
+	p{
+		text-transform: uppercase;
+		font-family: 'Druk', sans-serif;
+		font-size: 14px;
+		line-height: 19.6px;
+		color: $text-main;
+		align-items: center;
+		display: flex;
+		gap: 12px;
+		cursor: pointer;
+	}
+	.profile{
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+		border-radius: 20px;
+		padding: 9px 2px 9px 16px;
+		align-items: center;
+		background-color: #EFEFEF;
+		cursor: pointer;
+	}
+}
+@media screen and (max-width: 430px){
+	.navigation .menu, .navMenu p{
+		display: none;
+	}
+	.navigation .menuMobile{
+		display: block;
+	}
+	.navigation {
+		gap: 0;
+		width: 65%;
+	}
+	.navigation .navbarBtn {
+		margin: 16px 0 0 0;
+	}
+	.navMenu .profile{
+		background-color: transparent;
+	}
+}
